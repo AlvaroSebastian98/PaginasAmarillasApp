@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.DetailCompanyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/picture_image"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            tools:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/fullname_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@+id/picture_image"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            tools:text="La Casa del Tacu Tacu"/>
+
+        <TextView
+            android:id="@+id/category_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_below="@id/fullname_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:text="Restaurante"/>
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/category_text"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            tools:text="Jr. Pelotillehue 53-48 Int 84"/>
+
+        <TextView
+            android:id="@+id/number_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/address_text"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            tools:text="927 256 152"/>
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/number_text"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"
+            tools:text="Déjese cautivar por el mejor sabor criollo"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/website_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:onClick="searchWebPage"
+            android:src="@android:drawable/ic_menu_info_details" />
+
+        <ImageButton
+            android:id="@+id/email_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:onClick="sendEmail"
+            android:src="@android:drawable/ic_dialog_email" />
+
+        <ImageButton
+            android:id="@+id/sms_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:onClick="sendSMS"
+            android:src="@android:drawable/stat_notify_chat" />
+
+        <ImageButton
+            android:id="@+id/share_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:onClick="share"
+            android:src="@android:drawable/ic_menu_share" />
+
+        <ImageButton
+            android:id="@+id/call_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@color/colorPrimary"
+            android:onClick="call"
+            android:src="@android:drawable/sym_action_call" />
+
+    </LinearLayout>
+
+</RelativeLayout>
